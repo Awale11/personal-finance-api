@@ -12,7 +12,7 @@ const options = {
         },
         servers: [
             {
-                url: process.env.NODE_ENV == "development" ? "http://localhost:5000" : "https://personal-finance-api-1-zvi0.onrender.com"
+                url: process.env.NODE_ENV == "development" ? "http://localhost:5000" : "https://personal-finance-api-wm9t.onrender.com"
             }
         ],
         components: {
