@@ -32,12 +32,12 @@ app.use('/admin', adminRoutes);
 app.use(errorHandler)
 
 mongoose
-    .connect(process.env.MONGO_URI)
+    .connect(process.env.MONGO_URI == "development" ? process.env.MONGO_URI_DEV : process.env.MONGO_URI_PRO)
     .then(() => {
         console.log("✅ MongoDB connected");
 
         app.listen(PORT, ()=> {
-            console.log(`Server running on port ${PORT}`)
+            console.log(`Server running on port ${process.env.PORT}`);
         });
         // app.listen(process.env.PORT, () => {
         //     console.log(`Server running on port ${process.env.PORT}`);
