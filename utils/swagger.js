@@ -1,4 +1,6 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const options = {
     definition: {
@@ -10,8 +12,7 @@ const options = {
         },
         servers: [
             {
-                // url: "http://localhost:5000"
-                url: "https://personal-finance-api-1-zvi0.onrender.com"
+                url: process.env.NODE_ENV == "development" ? "http://localhost:5000" : "https://personal-finance-api-1-zvi0.onrender.com"
             }
         ],
         components: {
