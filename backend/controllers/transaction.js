@@ -1,6 +1,6 @@
 import Transaction from "../models/Transaction.js"
 
-// CPOST/CREATE transaction
+// POST/CREATE transaction
 export const createTransaction = async (req, res, next)=> {
     try {
         // const transaction = await Transaction.create({
@@ -25,9 +25,7 @@ export const createTransaction = async (req, res, next)=> {
 export const getTransactions = async(req, res, next)=> {
     try {
         // JWT'den gelen kullanıcının ID'sine ait kayıtları getiriyoruz.
-        const transaction = await Transaction.find({
-            user: req.user._id
-        });
+        const transaction = await Transaction.find().sort({createdAt: -1});
         res.json(transaction);
     } catch (error) {
         next(error)

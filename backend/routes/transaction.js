@@ -69,7 +69,7 @@ router.get('/monthly-summary', protect, monthlySummary);
  *         description: Unauthorized
  */
 // for post
-router.post('/', protect, createTransaction);
+// router.post('/', createTransaction);
 /**
  * @swagger
  * /transaction:
@@ -85,7 +85,7 @@ router.post('/', protect, createTransaction);
  *         description: Unauthorized
  */
 // for get all transactions
-router.get('/', protect, getTransactions);
+router.get('/', getTransactions);
 /**
  * @swagger
  * /transaction/{id}:
