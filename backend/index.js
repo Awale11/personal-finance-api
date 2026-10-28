@@ -52,7 +52,7 @@ if(process.env.NODE_ENV === 'production') {
     // Serve the frontend app
 
     app.get(/.*/, (req, res) => {
-        res.send(path.join(_dirname, '..', 'fontend', 'dist', 'index.html'))
+        res.send(path.join(_dirname, '..', 'frontend', 'dist', 'index.html'))
     })
 }
 
