@@ -13,9 +13,10 @@ const DashboardPage = () => {
 
     const [editingTransaction, setEditingTransaction] = useState(null);
     const [dialogOpen, setDialogOpen] = useState(false);
+    
     return (
 
-        <div className='flex min-h-screen bg-slate-100'>
+        <div className="flex min-h-screen w-full bg-background">
             <Sidebar />
 
             <main className='flex-1 p-8'>
@@ -42,7 +43,7 @@ const DashboardPage = () => {
                     </Button>
                 </div>
 
-                <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'>
+                <div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3'>
                     <SummaryCards />
 
                 </div>

@@ -13,7 +13,7 @@ const [editingTransaction, setEditingTransaction] = useState(null);
 const [dialogOpen, setDialogOpen] = useState(false)
 
 return (
-    <div className="flex min-h-screen bg-slate-100">
+    <div className="flex min-h-screen">
         <Sidebar />
 
         <main className="flex-1 p-8">

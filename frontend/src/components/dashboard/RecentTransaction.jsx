@@ -65,7 +65,8 @@ const RecentTransaction = ({ onEdit, limit = 5 }) => {
 
             </div>
 
-            <div className="overflow-hidden rounded-xl border bg-white">
+            <div className="w-full min-w-0 overflow-x-auto rounded-xl border bg-white">
+
                 {isLoading ? (
                     <p className="p-6 text-sm text-slate-500">
                         Loading transactions...
@@ -86,7 +87,7 @@ const RecentTransaction = ({ onEdit, limit = 5 }) => {
                         </p>
                     </div>
                 ) : (
-                    <Table>
+                   <Table className="min-w-[700px]">
                         <TableHeader>
                             <TableRow>
                                 <TableHead>Transaction</TableHead>
